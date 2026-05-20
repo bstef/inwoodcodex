@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Peacock Computer homelab landing page with live time and Better Stack status.">
+    <title>Peacock Computer Homelab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="shell">
+      <header class="site-header" aria-label="Primary">
+        <a class="brand" href="https://peacock.computer" aria-label="Open peacock.computer">
+          <span class="brand-mark">pc</span>
+          <span>
+            <strong>peacock.computer</strong>
+            <small>homelab console</small>
+          </span>
+        </a>
+        <nav class="nav-links" aria-label="Quick links">
+          <a href="#services">Services</a>
+          <a href="#status">Status</a>
+          <a href="https://peacockengr.betteruptime.com/" target="_blank" rel="noreferrer">Better Stack</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <div class="eyebrow">
+              <span class="pulse"></span>
+              Peacock Engineering
+            </div>
+            <h1 id="hero-title">Peacock Homelab Operations</h1>
+            <p>
+              A central dashboard for the Peacock Computer network: smart home
+              systems, infrastructure, utilities, and public uptime.
+            </p>
+            <div class="actions">
+              <a class="button primary" href="#services">View Services</a>
+              <a class="button secondary" href="https://peacockengr.betteruptime.com/" target="_blank" rel="noreferrer">Open Status</a>
+            </div>
+          </div>
+
+          <aside class="console-panel" aria-label="Live homelab summary">
+            <div class="panel-topline">
+              <span>Live Snapshot</span>
+              <span id="tz-label">America/New_York</span>
+            </div>
+            <div class="clock" id="clock">--:--:--</div>
+            <div class="date" id="date">Loading local date</div>
+            <div class="status-card">
+              <div>
+                <span class="label">Better Stack</span>
+                <strong>Current Status</strong>
+              </div>
+              <a class="status-pill" href="https://peacockengr.betteruptime.com/" target="_blank" rel="noreferrer">
+                <span class="pulse"></span>
+                All services online
+              </a>
+            </div>
+            <div class="metric-grid" aria-label="Homelab metrics">
+              <div>
+                <span>Services</span>
+                <strong>7</strong>
+              </div>
+              <div>
+                <span>Monitor</span>
+                <strong>Live</strong>
+              </div>
+              <div>
+                <span>Stack</span>
+                <strong>Proxmox</strong>
+              </div>
+              <div>
+                <span>Edge</span>
+                <strong>Cloudflare</strong>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section" id="services" aria-labelledby="services-title">
+          <div class="section-heading">
+            <span class="kicker">Service Directory</span>
+            <h2 id="services-title">Fast routes into the lab</h2>
+          </div>
+          <div class="service-grid">
+            <a class="service-card green" href="https://homebridge.peacock.computer">
+              <span class="service-type">Smart Home</span>
+              <strong>Homebridge</strong>
+              <small>homebridge.peacock.computer</small>
+            </a>
+            <a class="service-card violet" href="https://home.inwood.cloud">
+              <span class="service-type">Automation</span>
+              <strong>Home Assistant</strong>
+              <small>home.inwood.cloud</small>
+            </a>
+            <a class="service-card blue" href="https://pve.peacock.computer">
+              <span class="service-type">Infrastructure</span>
+              <strong>Proxmox PVE</strong>
+              <small>pve.peacock.computer</small>
+            </a>
+            <a class="service-card amber" href="https://domain.peacock.computer">
+              <span class="service-type">DNS</span>
+              <strong>Domain Manager</strong>
+              <small>domain.peacock.computer</small>
+            </a>
+            <a class="service-card coral" href="https://myspeed.peacock.computer">
+              <span class="service-type">Network</span>
+              <strong>Speed Test</strong>
+              <small>myspeed.peacock.computer</small>
+            </a>
+            <a class="service-card teal" href="https://alpine.peacock.computer">
+              <span class="service-type">Tools</span>
+              <strong>IT Tools</strong>
+              <small>alpine.peacock.computer</small>
+            </a>
+            <a class="service-card slate" href="https://community-scripts.org/" target="_blank" rel="noreferrer">
+              <span class="service-type">Scripts</span>
+              <strong>PVE Community Scripts</strong>
+              <small>community-scripts.org</small>
+            </a>
+          </div>
+        </section>
+
+        <section class="status-section" id="status" aria-labelledby="status-title">
+          <div class="section-heading">
+            <span class="kicker">Public Uptime</span>
+            <h2 id="status-title">Peacock Engineering status</h2>
+          </div>
+          <div class="status-layout">
+            <div class="status-copy">
+              <p>
+                Better Stack is the source of truth for availability. Current
+                public status: all services are online, with the full page
+                available for incident history and component details.
+              </p>
+              <a class="button primary compact" href="https://peacockengr.betteruptime.com/" target="_blank" rel="noreferrer">View Full Status</a>
+            </div>
+            <div class="status-embed">
+              <span class="big-status-dot"></span>
+              <div>
+                <span class="label">Better Stack says</span>
+                <strong>All services are online</strong>
+                <small>Last checked from public status page</small>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <span>peacock.computer</span>
+        <span id="footer-time">Updated locally</span>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
