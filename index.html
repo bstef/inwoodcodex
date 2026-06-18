@@ -3,161 +3,211 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Peacock Computer homelab landing page with live time and Better Stack status.">
-    <title>Peacock Computer Homelab</title>
+    <meta name="description" content="Inwood at Great Notch, a home community in Little Falls, New Jersey.">
+    <title>Inwood at Great Notch | Little Falls, NJ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <div class="shell">
-      <header class="site-header" aria-label="Primary">
-        <a class="brand" href="https://peacock.computer" aria-label="Open peacock.computer">
-          <span class="brand-mark">pc</span>
-          <span>
-            <strong>peacock.computer</strong>
-            <small>homelab console</small>
-          </span>
-        </a>
-        <nav class="nav-links" aria-label="Quick links">
-          <a href="#services">Services</a>
-          <a href="#status">Status</a>
-          <a href="https://peacockengr.betteruptime.com/" target="_blank" rel="noreferrer">Better Stack</a>
-        </nav>
-      </header>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Inwood at Great Notch home">
+        <span class="brand-mark">IG</span>
+        <span class="brand-copy">
+          <strong>Inwood at Great Notch</strong>
+          <small>Little Falls, NJ</small>
+        </span>
+      </a>
 
-      <main>
-        <section class="hero" aria-labelledby="hero-title">
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-toggle>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" aria-label="Primary navigation" data-nav>
+        <a href="./index.html" aria-current="page">Home</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#shareholders">Shareholders</a>
+        <a href="#location">Map</a>
+        <a class="nav-portal" href="https://portal.cp-management.com/public" target="_blank" rel="noreferrer">Open Portal</a>
+        <button class="theme-toggle" type="button" aria-label="Switch color mode" data-theme-toggle>
+          <span class="theme-icon" aria-hidden="true"></span>
+          <span data-theme-label>Light</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-backdrop" aria-hidden="true">
+          <img src="./assets/gallery/inwood-grounds-2.jpg" alt="">
+        </div>
+        <div class="hero-inner">
           <div class="hero-copy">
-            <div class="eyebrow">
-              <span class="pulse"></span>
-              Peacock Engineering
-            </div>
-            <h1 id="hero-title">Peacock Homelab Operations</h1>
+            <p class="eyebrow">Home community in Little Falls</p>
+            <h1><span>Inwood at</span><span>Great Notch</span></h1>
             <p>
-              A central dashboard for the Peacock Computer network: smart home
-              systems, infrastructure, utilities, and public uptime.
+              A quiet, park-like community beside Garret Mountain Reservation with
+              pool membership, courts, play areas, and convenient access to transit,
+              highways, and New York City.
             </p>
-            <div class="actions">
-              <a class="button primary" href="#services">View Services</a>
-              <a class="button secondary" href="https://peacockengr.betteruptime.com/" target="_blank" rel="noreferrer">Open Status</a>
+            <div class="hero-actions">
+              <a class="button primary" href="https://portal.cp-management.com/public" target="_blank" rel="noreferrer">Open Resident Portal</a>
+              <a class="button ghost" href="./gallery.html">View Gallery</a>
             </div>
           </div>
 
-          <aside class="console-panel" aria-label="Live homelab summary">
-            <div class="panel-topline">
-              <span>Live Snapshot</span>
-              <span id="tz-label">America/New_York</span>
-            </div>
-            <div class="clock" id="clock">--:--:--</div>
-            <div class="date" id="date">Loading local date</div>
-            <div class="status-card">
-              <div>
-                <span class="label">Better Stack</span>
-                <strong>Current Status</strong>
-              </div>
-              <a class="status-pill" href="https://peacockengr.betteruptime.com/" target="_blank" rel="noreferrer">
-                <span class="pulse"></span>
-                All services online
-              </a>
-            </div>
-            <div class="metric-grid" aria-label="Homelab metrics">
-              <div>
-                <span>Services</span>
-                <strong>7</strong>
-              </div>
-              <div>
-                <span>Monitor</span>
-                <strong>Live</strong>
-              </div>
-              <div>
-                <span>Stack</span>
-                <strong>Proxmox</strong>
-              </div>
-              <div>
-                <span>Edge</span>
-                <strong>Cloudflare</strong>
-              </div>
+          <aside class="hero-card" aria-label="Inwood quick information">
+            <img src="./assets/gallery/inwood-entrance-2.jpg" alt="Inwood at Great Notch entrance sign">
+            <div class="hero-card-body">
+              <span>181 Long Hill Road</span>
+              <strong>Little Falls, NJ 07424</strong>
+              <p>Use the CP Management portal for tickets and home, apartment, or complex-related requests.</p>
             </div>
           </aside>
-        </section>
+        </div>
+      </section>
 
-        <section class="section" id="services" aria-labelledby="services-title">
-          <div class="section-heading">
-            <span class="kicker">Service Directory</span>
-            <h2 id="services-title">Fast routes into the lab</h2>
-          </div>
-          <div class="service-grid">
-            <a class="service-card green" href="https://homebridge.peacock.computer">
-              <span class="service-type">Smart Home</span>
-              <strong>Homebridge</strong>
-              <small>homebridge.peacock.computer</small>
-            </a>
-            <a class="service-card violet" href="https://home.inwood.cloud">
-              <span class="service-type">Automation</span>
-              <strong>Home Assistant</strong>
-              <small>home.inwood.cloud</small>
-            </a>
-            <a class="service-card blue" href="https://pve.peacock.computer">
-              <span class="service-type">Infrastructure</span>
-              <strong>Proxmox PVE</strong>
-              <small>pve.peacock.computer</small>
-            </a>
-            <a class="service-card amber" href="https://domain.peacock.computer">
-              <span class="service-type">DNS</span>
-              <strong>Domain Manager</strong>
-              <small>domain.peacock.computer</small>
-            </a>
-            <a class="service-card coral" href="https://myspeed.peacock.computer">
-              <span class="service-type">Network</span>
-              <strong>Speed Test</strong>
-              <small>myspeed.peacock.computer</small>
-            </a>
-            <a class="service-card teal" href="https://alpine.peacock.computer">
-              <span class="service-type">Tools</span>
-              <strong>IT Tools</strong>
-              <small>alpine.peacock.computer</small>
-            </a>
-            <a class="service-card slate" href="https://community-scripts.org/" target="_blank" rel="noreferrer">
-              <span class="service-type">Scripts</span>
-              <strong>PVE Community Scripts</strong>
-              <small>community-scripts.org</small>
-            </a>
-          </div>
-        </section>
+      <section class="action-strip" aria-label="Important resident links">
+        <a class="action-card featured" href="https://portal.cp-management.com/public" target="_blank" rel="noreferrer">
+          <span>Property Management</span>
+          <strong>Open Tickets and Requests</strong>
+          <small>For home, apartment, maintenance, and complex-related issues.</small>
+        </a>
+        <a class="action-card" href="./gallery.html">
+          <span>Community Photos</span>
+          <strong>Gallery of Pictures of Inwood</strong>
+          <small>Grounds, entrances, pool, courts, playground, and living areas.</small>
+        </a>
+        <div class="action-card">
+          <span>Location</span>
+          <strong>Next to Garret Mountain</strong>
+          <small>Near Clifton, Cedar Grove, Montclair, NJ Transit, and major highways.</small>
+        </div>
+      </section>
 
-        <section class="status-section" id="status" aria-labelledby="status-title">
-          <div class="section-heading">
-            <span class="kicker">Public Uptime</span>
-            <h2 id="status-title">Peacock Engineering status</h2>
-          </div>
-          <div class="status-layout">
-            <div class="status-copy">
-              <p>
-                Better Stack is the source of truth for availability. Current
-                public status: all services are online, with the full page
-                available for incident history and component details.
-              </p>
-              <a class="button primary compact" href="https://peacockengr.betteruptime.com/" target="_blank" rel="noreferrer">View Full Status</a>
+      <section class="section intro-section">
+        <div class="section-copy">
+          <p class="eyebrow">Modern Convenience, Quiet Setting</p>
+          <h2>Suburbia with everyday access built in.</h2>
+          <p>
+            Inwood at Great Notch offers an easy lifestyle with landscaped grounds
+            and recreational amenities without time-consuming upkeep. The community is
+            situated within easy reach of public transportation, major highways, and NYC.
+          </p>
+        </div>
+        <div class="image-stack" aria-label="Community scenery">
+          <img class="image-stack-large" src="./assets/gallery/address.jpg" alt="181 Long Hill Road sign at Inwood">
+          <img class="image-stack-small" src="./assets/gallery/inwood-grounds.jpg" alt="Landscaped grounds at Inwood">
+        </div>
+      </section>
+
+      <section class="section" id="amenities">
+        <div class="section-heading">
+          <p class="eyebrow">Amenities</p>
+          <h2>Comforts close to home.</h2>
+        </div>
+        <div class="amenity-grid">
+          <article class="amenity-card">
+            <img src="./assets/gallery/pool-3.jpg" alt="Pool at Inwood">
+            <div>
+              <span>Pool</span>
+              <h3>Summer-ready community pool</h3>
+              <p>Pool membership brings a relaxed warm-weather gathering place right into the complex.</p>
             </div>
-            <div class="status-embed">
-              <span class="big-status-dot"></span>
-              <div>
-                <span class="label">Better Stack says</span>
-                <strong>All services are online</strong>
-                <small>Last checked from public status page</small>
-              </div>
+          </article>
+          <article class="amenity-card">
+            <img src="./assets/gallery/tennis.jpg" alt="Tennis courts at Inwood">
+            <div>
+              <span>Courts</span>
+              <h3>Tennis and basketball</h3>
+              <p>Outdoor courts make it easy to stay active without leaving the neighborhood.</p>
             </div>
-          </div>
-        </section>
-      </main>
+          </article>
+          <article class="amenity-card">
+            <img src="./assets/gallery/playground-inwood.jpg" alt="Playground at Inwood">
+            <div>
+              <span>Family</span>
+              <h3>Play areas and open space</h3>
+              <p>Children's play areas and green surroundings help the community feel calm and livable.</p>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      <footer>
-        <span>peacock.computer</span>
-        <span id="footer-time">Updated locally</span>
-      </footer>
-    </div>
+      <section class="section shareholders-section" id="shareholders">
+        <div class="section-heading">
+          <p class="eyebrow">Private Area</p>
+          <h2>Homeowner shareholders</h2>
+          <p>Restricted homeowner resources from the existing Inwood site.</p>
+        </div>
+        <div class="shareholder-grid">
+          <a class="shareholder-card" href="http://www.inwoodatgreatnotch.com/shareHolders/notices.shtml">
+            <span class="lock-icon" aria-hidden="true"></span>
+            <strong>Current Notices</strong>
+          </a>
+          <a class="shareholder-card" href="http://www.inwoodatgreatnotch.com/shareHolders/minutes.shtml">
+            <span class="lock-icon" aria-hidden="true"></span>
+            <strong>Meeting Minutes</strong>
+          </a>
+          <a class="shareholder-card" href="http://www.inwoodatgreatnotch.com/shareHolders/inside.shtml">
+            <span class="lock-icon" aria-hidden="true"></span>
+            <strong>Inside Inwood</strong>
+          </a>
+          <a class="shareholder-card" href="http://www.inwoodatgreatnotch.com/shareHolders/forms.shtml">
+            <span class="lock-icon" aria-hidden="true"></span>
+            <strong>Forms</strong>
+          </a>
+          <a class="shareholder-card" href="http://www.inwoodatgreatnotch.com/boardMembers/boardMembers.shtml">
+            <span class="lock-icon" aria-hidden="true"></span>
+            <strong>Board Members</strong>
+          </a>
+        </div>
+      </section>
+
+      <section class="section photo-preview">
+        <div class="section-heading">
+          <p class="eyebrow">Gallery Preview</p>
+          <h2>Grounds, amenities, and everyday views.</h2>
+        </div>
+        <div class="preview-grid">
+          <img src="./assets/gallery/inwood-entrance-3.jpg" alt="Inwood entrance">
+          <img src="./assets/gallery/living-at-inwood.jpg" alt="Living at Inwood">
+          <img src="./assets/gallery/basketball.jpg" alt="Basketball court at Inwood">
+          <img src="./assets/gallery/pool.jpg" alt="Pool at Inwood">
+        </div>
+        <a class="button ghost centered" href="./gallery.html">Open Full Gallery</a>
+      </section>
+
+      <section class="section location-section" id="location">
+        <div class="section-heading">
+          <p class="eyebrow">Map</p>
+          <h2>Find Inwood at Great Notch.</h2>
+          <p>181 Long Hill Road, Little Falls, NJ 07424</p>
+        </div>
+        <div class="map-panel">
+          <iframe
+            title="Map to Inwood at Great Notch"
+            src="https://www.google.com/maps?q=181%20Long%20Hill%20Road%2C%20Little%20Falls%2C%20NJ%2007424&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Inwood at Great Notch</strong>
+        <span>181 Long Hill Road, Little Falls, NJ 07424</span>
+      </div>
+      <div class="footer-links">
+        <a href="./gallery.html">Gallery</a>
+        <a href="https://portal.cp-management.com/public" target="_blank" rel="noreferrer">Resident Portal</a>
+      </div>
+    </footer>
 
     <script src="./script.js"></script>
   </body>
