@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>181 Long Hill Road</title>
+  <ellipse cx="32" cy="32" rx="30" ry="24" fill="#eee7d5" stroke="#657568" stroke-width="2"/>
+  <ellipse cx="32" cy="32" rx="26" ry="20" fill="#4b202c"/>
+  <text x="32" y="33" fill="#ead09a" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" text-anchor="middle" dominant-baseline="middle">181</text>
+</svg>
